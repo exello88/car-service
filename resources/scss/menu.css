@@ -1,0 +1,33 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid #272727;
+    background-color: white;
+    position: relative;
+}
+
+.menu-logo__img {
+    margin-right: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.menu-dropdown {
+    display: flex;
+}
+
+
+.menu__item-title {
+    margin-left: 25px;
+    cursor: pointer;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.menu__item-title:hover {
+    color: #feca00;
+}
