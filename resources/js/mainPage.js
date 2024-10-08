@@ -67,7 +67,7 @@ document.querySelector('.gallery-slider').addEventListener('touchstart', (event)
 
 document.querySelector('.gallery-slider').addEventListener('touchend', (event) => {
     if (changingNow) return;
-    
+
     endSlidingX = event.changedTouches[0].clientX;
 
     if (Math.abs(startSlidingX - endSlidingX) > 50) {
@@ -112,6 +112,11 @@ function changeSlide(index) {
         } else {
             slideNumber = index;
         }
+
+        if (slideNumber === quallitySlides - 1)
+            document.querySelector('.gallery-slider-slide__next').style.display = "none";
+        else
+            document.querySelector('.gallery-slider-slide__next').style.display = "block";
     } else {
         if (index + 3 > quallitySlides) {
             slideNumber = 0;
@@ -120,6 +125,11 @@ function changeSlide(index) {
         } else {
             slideNumber = index;
         }
+
+        if (slideNumber === quallitySlides - 3)
+            document.querySelector('.gallery-slider-slide__next').style.display = "none";
+        else
+            document.querySelector('.gallery-slider-slide__next').style.display = "block";
     }
 
     let movingTo;
